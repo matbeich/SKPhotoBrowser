@@ -884,7 +884,8 @@ public class SKPhotoBrowser: UIViewController, UIScrollViewDelegate {
         
         UIView.animateWithDuration(animationDuration, delay:0, usingSpringWithDamping:animationDamping, initialSpringVelocity:0, options:.CurveEaseInOut, animations: { () -> () in
                 self.backgroundView.alpha = 0.0
-                self.resizableImageView.layer.frame = self.senderViewOriginalFrame
+                self.resizableImageView.alpha = 0
+//                self.resizableImageView.layer.frame = self.senderViewOriginalFrame
             },
             completion: { (Bool) -> () in
                 self.resizableImageView.removeFromSuperview()
