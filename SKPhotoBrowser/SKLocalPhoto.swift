@@ -13,9 +13,10 @@ public class SKLocalPhoto: NSObject, SKPhotoProtocol {
     
     public var underlyingImage: UIImage!
     public var photoURL: String!
+    public var contentMode: UIViewContentMode = .ScaleToFill
     public var shouldCachePhotoURLImage: Bool = false
     public var caption: String!
-    public var index: Int?
+    public var index: Int = 0
     
     override init() {
         super.init()
@@ -49,9 +50,7 @@ public class SKLocalPhoto: NSObject, SKPhotoProtocol {
                         self.underlyingImage = image
                         self.loadUnderlyingImageComplete()
                     }
-                    
                 }
-                
             }
         }
     }
